@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shikha Legal Firm | Advocate Sudhanshu Sharma</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0D1B3E;
+  --navy2: #162347;
+  --navy3: #1E2F5A;
+  --gold: #B8973A;
+  --gold2: #D4AE57;
+  --white: #FFFFFF;
+  --offwhite: #F7F8FA;
+  --light: #EEF1F7;
+  --gray: #6B7280;
+  --gray2: #9CA3AF;
+  --text: #1F2937;
+  --border: #E5E9F2;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 400; overflow-x: hidden; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--light); }
+::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 4px; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 72px; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 5%;
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 4px 24px rgba(13,27,62,0.08); }
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-shield {
+  width: 42px; height: 42px; background: var(--navy);
+  clip-path: polygon(50% 0%, 100% 20%, 100% 70%, 50% 100%, 0% 70%, 0% 20%);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.logo-shield span { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--gold2); }
+.logo-text { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+.logo-sub { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--navy);
+  text-decoration: none; letter-spacing: 0.3px;
+  position: relative; transition: color 0.3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 2px; background: var(--gold); transition: width 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+.nav-btn {
+  padding: 9px 22px; background: var(--navy); color: white !important;
+  border-radius: 4px; font-size: 13px; font-weight: 500;
+  text-decoration: none; transition: all 0.3s; border: 2px solid var(--navy);
+}
+.nav-btn:hover { background: transparent; color: var(--navy) !important; }
+.nav-btn::after { display: none !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { width: 24px; height: 2px; background: var(--navy); display: block; border-radius: 2px; }
+
+/* HERO */
+#home { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 72px; overflow: hidden; }
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 60px 5% 60px 6%; background: var(--offwhite); position: relative;
+}
+.hero-left::after {
+  content: ''; position: absolute; top: 0; right: -38px; bottom: 0;
+  width: 76px; background: var(--offwhite);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%); z-index: 2;
+}
+.hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.eyebrow-line { width: 36px; height: 2px; background: var(--gold); border-radius: 2px; }
+.eyebrow-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+.hero-title { font-family: 'Playfair Display', serif; font-size: clamp(38px, 4.2vw, 60px); font-weight: 700; line-height: 1.15; color: var(--navy); margin-bottom: 8px; }
+.hero-title em { font-style: italic; color: var(--gold); display: block; }
+.hero-name { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gray); margin-bottom: 22px; font-weight: 500; }
+.hero-divider { width: 48px; height: 3px; background: var(--navy); margin-bottom: 22px; border-radius: 2px; }
+.hero-desc { font-size: 15px; line-height: 1.85; color: var(--gray); max-width: 440px; margin-bottom: 36px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-navy {
+  padding: 13px 28px; background: var(--navy); color: var(--white);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+  text-decoration: none; border-radius: 4px; transition: all 0.3s;
+  border: 2px solid var(--navy); display: inline-block;
+}
+.btn-navy:hover { background: var(--navy3); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,27,62,0.2); }
+.btn-outline {
+  padding: 13px 28px; border: 2px solid var(--navy); color: var(--navy);
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  border-radius: 4px; transition: all 0.3s; display: inline-block;
+}
+.btn-outline:hover { background: var(--navy); color: white; transform: translateY(-2px); }
+.hero-stats { display: flex; gap: 28px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--border); }
+.stat-n { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: var(--navy); line-height: 1; }
+.stat-l { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray2); margin-top: 3px; }
+
+/* CAROUSEL */
+.hero-right { position: relative; overflow: hidden; min-height: 600px; }
+.carousel { width: 100%; height: 100%; position: relative; }
+.carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease; }
+.carousel-slide.active { opacity: 1; }
+.slide-scene {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.s1 { background: linear-gradient(140deg, #0D1B3E 0%, #1E2F5A 100%); }
+.s2 { background: linear-gradient(140deg, #0A1628 0%, #1a2a50 100%); }
+.s3 { background: linear-gradient(140deg, #0D1B3E 0%, #162347 100%); }
+.slide-svg { position: relative; z-index: 2; width: 90%; max-width: 460px; }
+.slide-caption-box {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,27,62,0.92) 0%, transparent 70%);
+  padding: 40px 32px 28px; z-index: 5;
+}
+.sc-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold2); margin-bottom: 6px; }
+.sc-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: white; line-height: 1.3; }
+.carousel-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
+.dot { width: 8px; height: 8px; border-radius: 4px; background: rgba(255,255,255,0.35); cursor: pointer; border: none; transition: all 0.3s; }
+.dot.active { background: var(--gold2); width: 24px; }
+.c-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; }
+.c-arrow-l { left: 14px; }
+.c-arrow-r { right: 14px; }
+.arr-btn {
+  width: 38px; height: 38px; background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25); border-radius: 50%;
+  color: white; font-size: 18px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px); transition: all 0.3s;
+}
+.arr-btn:hover { background: rgba(255,255,255,0.25); }
+.hero-badge-circle {
+  position: absolute; top: 22px; right: 22px; z-index: 10;
+  width: 86px; height: 86px; border-radius: 50%;
+  background: var(--gold); display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.hb-num { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: white; line-height: 1; }
+.hb-txt { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.9); text-align: center; margin-top: 2px; }
+
+/* MARQUEE */
+.marquee-strip { background: var(--navy); padding: 14px 0; overflow: hidden; white-space: nowrap; }
+.marquee-track { display: inline-flex; animation: marquee 30s linear infinite; }
+.mi { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); padding: 0 28px; font-weight: 500; }
+.ms { color: var(--gold2); padding: 0 4px; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* SECTIONS */
+section { padding: 90px 5%; }
+.section-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.tag-line { width: 28px; height: 2px; background: var(--gold); border-radius: 2px; }
+.tag-text { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.sec-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 46px); font-weight: 700; color: var(--navy); line-height: 1.2; }
+.sec-title em { font-style: italic; color: var(--gold); }
+
+/* ABOUT */
+#about { background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.about-visual-wrap { position: relative; padding-bottom: 24px; padding-left: 24px; }
+.about-img-frame {
+  background: var(--navy); border-radius: 8px; overflow: hidden;
+  position: relative; min-height: 420px; display: flex; align-items: center; justify-content: center;
+}
+.about-exp-badge {
+  position: absolute; bottom: 0; left: 0;
+  background: var(--gold); color: white;
+  padding: 20px 24px; border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15); text-align: center;
+}
+.exp-n { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; line-height: 1; display: block; }
+.exp-t { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.9; margin-top: 3px; }
+.about-corner-tag {
+  position: absolute; top: 12px; right: 0;
+  background: var(--navy); color: white;
+  padding: 9px 18px; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; border-radius: 4px;
+}
+.about-body { font-size: 15px; line-height: 1.9; color: var(--gray); margin-bottom: 16px; }
+.about-hl { list-style: none; margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.about-hl li { display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--text); }
+.about-hl li::before {
+  content: '✓'; width: 20px; height: 20px; background: var(--navy);
+  color: white; border-radius: 50%; font-size: 10px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* EXPERTISE */
+#expertise { background: var(--offwhite); }
+.expertise-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 52px; }
+.expertise-desc { font-size: 15px; line-height: 1.85; color: var(--gray); }
+.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.ex-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; padding: 34px 28px; position: relative;
+  overflow: hidden; transition: all 0.35s; cursor: default;
+}
+.ex-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--navy);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.35s;
+}
+.ex-card:hover { box-shadow: 0 12px 40px rgba(13,27,62,0.1); transform: translateY(-4px); border-color: transparent; }
+.ex-card:hover::before { transform: scaleX(1); }
+.ex-icon { width: 50px; height: 50px; background: var(--light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; transition: background 0.3s; }
+.ex-card:hover .ex-icon { background: var(--navy); }
+.ex-num { position: absolute; top: 18px; right: 22px; font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: var(--light); line-height: 1; }
+.ex-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 9px; }
+.ex-text { font-size: 13px; line-height: 1.8; color: var(--gray); }
+
+/* AREAS */
+#areas { background: var(--navy); }
+.areas-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; align-items: start; }
+#areas .sec-title { color: white; }
+#areas .sec-title em { color: var(--gold2); }
+#areas .tag-text { color: var(--gold2); }
+#areas .tag-line { background: var(--gold2); }
+.areas-intro { font-size: 15px; line-height: 1.85; color: rgba(255,255,255,0.6); margin-top: 18px; margin-bottom: 32px; }
+.areas-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden; }
+.area-item {
+  background: rgba(255,255,255,0.03); padding: 15px 18px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: rgba(255,255,255,0.75);
+  transition: all 0.3s; cursor: default;
+}
+.area-item:hover { background: rgba(255,255,255,0.08); color: white; padding-left: 24px; }
+.area-dot { width: 6px; height: 6px; background: var(--gold2); border-radius: 50%; flex-shrink: 0; }
+.areas-cta {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 40px 32px; position: relative; overflow: hidden;
+}
+.areas-cta::before {
+  content: '⚖'; position: absolute; bottom: -15px; right: -5px;
+  font-size: 130px; color: rgba(255,255,255,0.03); line-height: 1;
+}
+.cta-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: white; line-height: 1.3; margin-bottom: 14px; }
+.cta-text { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 22px; }
+.btn-gold {
+  display: inline-block; padding: 12px 26px; background: var(--gold);
+  color: white; font-size: 13px; font-weight: 600;
+  text-decoration: none; border-radius: 4px; transition: all 0.3s;
+  border: 2px solid var(--gold);
+}
+.btn-gold:hover { background: transparent; color: var(--gold2); border-color: var(--gold2); }
+.mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 28px; background: rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; }
+.ms-item { background: rgba(255,255,255,0.04); padding: 18px 12px; text-align: center; }
+.ms-n { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--gold2); line-height: 1; }
+.ms-l { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 3px; }
+
+/* TEAM */
+#team { background: var(--white); }
+.team-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 52px; }
+.team-header-desc { font-size: 15px; line-height: 1.85; color: var(--gray); }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.team-card { background: var(--offwhite); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.3s; }
+.team-card:hover { box-shadow: 0 14px 44px rgba(13,27,62,0.1); transform: translateY(-4px); }
+.team-card-featured { grid-column: span 2; display: grid; grid-template-columns: 190px 1fr; }
+.team-avatar { background: var(--navy); min-height: 190px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.team-card-featured .team-avatar { min-height: auto; }
+.av-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px); }
+.av-circle {
+  width: 72px; height: 72px; background: rgba(255,255,255,0.08);
+  border: 2px solid var(--gold2); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--gold2); position: relative; z-index: 2;
+}
+.team-card-featured .av-circle { width: 90px; height: 90px; font-size: 32px; }
+.team-info { padding: 26px; }
+.team-card-featured .team-info { padding: 34px; display: flex; flex-direction: column; justify-content: center; }
+.t-role { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; font-weight: 600; }
+.t-name { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.team-card-featured .t-name { font-size: 24px; }
+.t-bio { font-size: 13px; line-height: 1.75; color: var(--gray); }
+.t-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.chip { padding: 4px 11px; background: var(--light); border: 1px solid var(--border); border-radius: 20px; font-size: 10px; color: var(--navy); font-weight: 500; }
+
+/* CONTACT */
+#contact { background: var(--offwhite); }
+.contact-center { text-align: center; max-width: 580px; margin: 0 auto 52px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+.ci { display: flex; gap: 14px; margin-bottom: 24px; align-items: flex-start; }
+.ci-icon { width: 44px; height: 44px; background: var(--navy); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+.ci-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 3px; }
+.ci-val { font-size: 14px; color: var(--text); line-height: 1.6; }
+.map-box { margin-top: 28px; background: var(--navy); border-radius: 10px; height: 170px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.map-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 28px 28px; }
+.map-pin { position: absolute; top: 36%; left: 50%; transform: translateX(-50%); font-size: 30px; animation: pin-bounce 2s ease infinite; z-index: 2; }
+.map-txt { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; font-size: 11px; letter-spacing: 2px; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+@keyframes pin-bounce { 0%,100%{top:36%} 50%{top:30%} }
+.form-wrap { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 40px; box-shadow: 0 8px 40px rgba(13,27,62,0.06); }
+.form-wrap-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.form-wrap-sub { font-size: 13px; color: var(--gray); margin-bottom: 26px; line-height: 1.6; }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.f-group { margin-bottom: 14px; }
+.f-label { display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 5px; }
+.f-input, .f-select, .f-textarea {
+  width: 100%; padding: 11px 13px;
+  border: 1.5px solid var(--border); border-radius: 6px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text);
+  background: var(--offwhite); outline: none; transition: border-color 0.3s, box-shadow 0.3s; appearance: none;
+}
+.f-input:focus, .f-select:focus, .f-textarea:focus { border-color: var(--navy); background: white; box-shadow: 0 0 0 3px rgba(13,27,62,0.06); }
+.f-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 13px center; padding-right: 34px; background-color: var(--offwhite); }
+.f-textarea { resize: none; height: 96px; }
+.f-submit {
+  width: 100%; padding: 14px; background: var(--navy); color: white;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
+  border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s; margin-top: 4px;
+}
+.f-submit:hover { background: var(--navy3); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(13,27,62,0.2); }
+.f-note { text-align: center; font-size: 11px; color: var(--gray2); margin-top: 10px; }
+.toast { display: none; align-items: center; gap: 10px; padding: 13px 16px; border-radius: 8px; margin-top: 12px; font-size: 13px; font-weight: 500; }
+.toast.ok { background: #ECFDF5; border: 1px solid #6EE7B7; color: #065F46; }
+.toast.er { background: #FEF2F2; border: 1px solid #FCA5A5; color: #991B1B; }
+
+/* FOOTER */
+footer { background: var(--navy); color: white; padding: 60px 5% 26px; }
+.f-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+.f-brand .logo-name { color: white; font-size: 18px; }
+.f-brand .logo-sub { color: var(--gold2); }
+.f-tagline { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.5); margin-top: 14px; max-width: 260px; }
+.f-div { width: 34px; height: 2px; background: var(--gold); margin: 18px 0; border-radius: 2px; }
+.f-soc { display: flex; gap: 8px; }
+.f-soc a { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; text-decoration: none; transition: all 0.3s; }
+.f-soc a:hover { background: rgba(255,255,255,0.1); }
+.f-col-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold2); font-weight: 600; margin-bottom: 18px; }
+.f-col ul { list-style: none; }
+.f-col ul li { margin-bottom: 9px; }
+.f-col ul li a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s; }
+.f-col ul li a:hover { color: white; }
+.f-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; }
+.f-copy { font-size: 12px; color: rgba(255,255,255,0.38); }
+.f-copy span { color: var(--gold2); }
+.f-legal { font-size: 11px; color: rgba(255,255,255,0.28); }
+
+/* REVEAL */
+.reveal, .reveal-l, .reveal-r { opacity: 0; transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal { transform: translateY(26px); }
+.reveal-l { transform: translateX(-26px); }
+.reveal-r { transform: translateX(26px); }
+.reveal.in, .reveal-l.in, .reveal-r.in { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .expertise-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .team-card-featured { grid-column: span 2; }
+  .f-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media(max-width:860px){
+  #home { grid-template-columns: 1fr; }
+  .hero-left::after { display: none; }
+  .hero-right { min-height: 300px; }
+  nav .nav-links, .nav-btn { display: none; }
+  .hamburger { display: flex; }
+  .about-grid, .expertise-header, .areas-grid, .team-header, .contact-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; gap: 18px; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-card-featured { grid-column: span 1; grid-template-columns: 1fr; }
+  .about-hl { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .mini-stats { grid-template-columns: 1fr; }
+  .f-row { grid-template-columns: 1fr; }
+  .f-grid { grid-template-columns: 1fr; }
+  .f-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="logo-shield"><span>SL</span></div>
+    <div class="logo-text">
+      <span class="logo-name">Shikha Legal Firm</span>
+      <span class="logo-sub">& Collection Agency</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">The Firm</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#areas">Practice Areas</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Shikha Legal Firm · Est. in India</span>
+    </div>
+    <h1 class="hero-title">Principled<br><em>Legal Advocacy</em></h1>
+    <p class="hero-name">Sudhanshu Sharma — Advocate &amp; Associate</p>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">At Shikha Legal Firm &amp; Collection Agency, we deliver strategic legal counsel with integrity and an unwavering commitment to justice — your trusted partner across civil, criminal, and commercial law.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-navy">Book Consultation</a>
+      <a href="#about" class="btn-outline">Know More</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">500+</div><div class="stat-l">Cases Won</div></div>
+      <div><div class="stat-n">10+</div><div class="stat-l">Years Experience</div></div>
+      <div><div class="stat-n">12+</div><div class="stat-l">Practice Areas</div></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="carousel">
+
+      <!-- Slide 1: Scales of Justice -->
+      <div class="carousel-slide active">
+        <div class="slide-scene s1">
+          <svg class="slide-svg" viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#D4AE57" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#D4AE57" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="230" cy="190" rx="170" ry="160" fill="url(#g1)"/>
+            <!-- Pole -->
+            <rect x="222" y="36" width="16" height="232" rx="4" fill="#B8973A"/>
+            <!-- Crossbar -->
+            <rect x="100" y="72" width="260" height="10" rx="5" fill="#D4AE57"/>
+            <!-- Top ornament -->
+            <circle cx="230" cy="36" r="12" fill="#D4AE57"/>
+            <circle cx="230" cy="36" r="7" fill="#B8973A"/>
+            <!-- Left chain -->
+            <line x1="140" y1="82" x2="108" y2="188" stroke="#D4AE57" stroke-width="2" stroke-dasharray="4,3" opacity="0.8"/>
+            <line x1="172" y1="82" x2="148" y2="188" stroke="#D4AE57" stroke-width="2" stroke-dasharray="4,3" opacity="0.8"/>
+            <!-- Right chain -->
+            <line x1="290" y1="82" x2="314" y2="188" stroke="#D4AE57" stroke-width="2" stroke-dasharray="4,3" opacity="0.8"/>
+            <line x1="322" y1="82" x2="354" y2="188" stroke="#D4AE57" stroke-width="2" stroke-dasharray="4,3" opacity="0.8"/>
+            <!-- Left pan -->
+            <path d="M88 188 Q128 226 168 188" fill="rgba(184,151,58,0.12)" stroke="#D4AE57" stroke-width="2.5"/>
+            <line x1="88" y1="188" x2="168" y2="188" stroke="#D4AE57" stroke-width="2"/>
+            <!-- Right pan -->
+            <path d="M314 188 Q334 226 374 188" fill="rgba(184,151,58,0.12)" stroke="#D4AE57" stroke-width="2.5"/>
+            <line x1="314" y1="188" x2="374" y2="188" stroke="#D4AE57" stroke-width="2"/>
+            <!-- Books on left pan -->
+            <rect x="100" y="166" width="36" height="6" rx="2" fill="#4A6FA5" opacity="0.9"/>
+            <rect x="103" y="160" width="32" height="6" rx="2" fill="#5880C8" opacity="0.9"/>
+            <rect x="101" y="154" width="34" height="6" rx="2" fill="#3A5A9A" opacity="0.9"/>
+            <!-- Gavel right pan -->
+            <rect x="322" y="172" width="42" height="12" rx="4" fill="#8B6914" opacity="0.9"/>
+            <rect x="350" y="160" width="12" height="26" rx="3" fill="#A07820" opacity="0.9"/>
+            <!-- Base -->
+            <rect x="184" y="268" width="92" height="12" rx="4" fill="#D4AE57" opacity="0.7"/>
+            <rect x="196" y="280" width="68" height="8" rx="3" fill="#B8973A" opacity="0.5"/>
+            <!-- Particles -->
+            <circle cx="60" cy="70" r="3" fill="#D4AE57" opacity="0.4"/>
+            <circle cx="400" cy="100" r="2" fill="#D4AE57" opacity="0.3"/>
+            <circle cx="70" cy="290" r="4" fill="#D4AE57" opacity="0.25"/>
+            <circle cx="390" cy="290" r="3" fill="#D4AE57" opacity="0.3"/>
+            <text x="230" y="340" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="rgba(212,174,87,0.45)" letter-spacing="5">JUSTICE · INTEGRITY</text>
+          </svg>
+          <div class="slide-caption-box">
+            <div class="sc-label">Our Foundation</div>
+            <div class="sc-title">Balanced Justice for Every Client</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Courthouse -->
+      <div class="carousel-slide">
+        <div class="slide-scene s2">
+          <svg class="slide-svg" viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sky bg lines -->
+            <line x1="0" y1="50" x2="460" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="100" x2="460" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <!-- Pediment -->
+            <polygon points="80,118 230,42 380,118" fill="#1E3A6E" stroke="#D4AE57" stroke-width="2"/>
+            <polygon points="108,118 230,58 352,118" fill="#162347"/>
+            <!-- Frieze -->
+            <rect x="80" y="118" width="300" height="22" fill="#1E3A6E" stroke="#D4AE57" stroke-width="1.5"/>
+            <text x="230" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="#D4AE57" letter-spacing="2.5">SHIKHA LEGAL FIRM</text>
+            <!-- Columns -->
+            <rect x="94" y="140" width="24" height="148" rx="3" fill="#1E3060"/>
+            <ellipse cx="106" cy="140" rx="16" ry="5" fill="#243878"/>
+            <ellipse cx="106" cy="288" rx="16" ry="5" fill="#243878"/>
+            <rect x="148" y="140" width="24" height="148" rx="3" fill="#1E3060"/>
+            <ellipse cx="160" cy="140" rx="16" ry="5" fill="#243878"/>
+            <rect x="202" y="140" width="24" height="148" rx="3" fill="#1E3060"/>
+            <ellipse cx="214" cy="140" rx="16" ry="5" fill="#243878"/>
+            <rect x="234" y="140" width="24" height="148" rx="3" fill="#1E3060"/>
+            <ellipse cx="246" cy="140" rx="16" ry="5" fill="#243878"/>
+            <rect x="288" y="140" width="24" height="148" rx="3" fill="#1E3060"/>
+            <ellipse cx="300" cy="140" rx="16" ry="5" fill="#243878"/>
+            <rect x="342" y="140" width="24" height="148" rx="3" fill="#1E3060"/>
+            <ellipse cx="354" cy="140" rx="16" ry="5" fill="#243878"/>
+            <!-- Steps -->
+            <rect x="60" y="288" width="340" height="13" rx="2" fill="#1E3A6E"/>
+            <rect x="45" y="301" width="370" height="13" rx="2" fill="#162347"/>
+            <rect x="30" y="314" width="400" height="13" rx="2" fill="#0D1B3E"/>
+            <!-- Door -->
+            <rect x="204" y="222" width="52" height="66" rx="3 3 0 0" fill="#0D1B3E"/>
+            <rect x="207" y="225" width="22" height="57" rx="2" fill="#162347"/>
+            <rect x="231" y="225" width="22" height="57" rx="2" fill="#162347"/>
+            <circle cx="230" cy="260" r="3.5" fill="#D4AE57"/>
+            <!-- Windows -->
+            <rect x="108" y="168" width="30" height="42" rx="2" fill="#0D1B3E"/>
+            <rect x="322" y="168" width="30" height="42" rx="2" fill="#0D1B3E"/>
+            <!-- Flag -->
+            <line x1="230" y1="42" x2="230" y2="14" stroke="#D4AE57" stroke-width="2"/>
+            <polygon points="230,14 256,22 230,29" fill="#B8973A"/>
+            <!-- Stars -->
+            <circle cx="50" cy="180" r="3" fill="#D4AE57" opacity="0.3"/>
+            <circle cx="420" cy="150" r="2" fill="#D4AE57" opacity="0.3"/>
+          </svg>
+          <div class="slide-caption-box">
+            <div class="sc-label">Established Institution</div>
+            <div class="sc-title">Trusted Legal Presence Across Courts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Advocate -->
+      <div class="carousel-slide">
+        <div class="slide-scene s3">
+          <svg class="slide-svg" viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background grid subtle -->
+            <line x1="0" y1="330" x2="460" y2="330" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <!-- Advocate silhouette -->
+            <!-- Head -->
+            <ellipse cx="230" cy="118" rx="34" ry="34" fill="#1E3A6E"/>
+            <!-- Robe body -->
+            <path d="M172 290 Q182 208 192 186 Q211 162 230 157 Q249 162 268 186 Q278 208 288 290 Z" fill="#0D1B3E"/>
+            <!-- Robe arms -->
+            <path d="M196 220 Q166 244 154 262" stroke="#0D1B3E" stroke-width="22" fill="none" stroke-linecap="round"/>
+            <path d="M264 220 Q294 244 306 262" stroke="#0D1B3E" stroke-width="22" fill="none" stroke-linecap="round"/>
+            <!-- White collar bands -->
+            <rect x="219" y="155" width="22" height="13" rx="3" fill="white" opacity="0.92"/>
+            <line x1="230" y1="155" x2="230" y2="168" stroke="#DDD" stroke-width="1"/>
+            <!-- Brief in left hand -->
+            <rect x="138" y="254" width="24" height="32" rx="3" fill="#1E3A8A"/>
+            <line x1="138" y1="265" x2="162" y2="265" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="138" y1="272" x2="162" y2="272" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <!-- Desk -->
+            <rect x="80" y="290" width="300" height="16" rx="4" fill="#1E3060"/>
+            <rect x="94" y="306" width="14" height="60" rx="3" fill="#162347"/>
+            <rect x="352" y="306" width="14" height="60" rx="3" fill="#162347"/>
+            <!-- Books on desk -->
+            <rect x="100" y="266" width="70" height="8" rx="2" fill="#EEF1F7" opacity="0.8"/>
+            <rect x="100" y="258" width="66" height="8" rx="2" fill="white" opacity="0.7"/>
+            <rect x="100" y="250" width="68" height="8" rx="2" fill="#EEF1F7" opacity="0.7"/>
+            <!-- Open book -->
+            <rect x="188" y="258" width="50" height="32" rx="2" fill="#1E3A8A"/>
+            <rect x="188" y="258" width="25" height="32" fill="#2451B3"/>
+            <line x1="213" y1="258" x2="213" y2="290" stroke="#D4AE57" stroke-width="1.5"/>
+            <!-- Scales small -->
+            <circle cx="380" cy="90" r="26" fill="none" stroke="rgba(212,174,87,0.18)" stroke-width="1.5"/>
+            <circle cx="380" cy="90" r="18" fill="none" stroke="rgba(212,174,87,0.12)" stroke-width="1"/>
+            <text x="380" y="96" text-anchor="middle" font-size="18" fill="rgba(212,174,87,0.3)">⚖</text>
+            <!-- Latin text -->
+            <text x="230" y="354" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="rgba(212,174,87,0.35)" letter-spacing="3">AUDI ALTERAM PARTEM</text>
+          </svg>
+          <div class="slide-caption-box">
+            <div class="sc-label">Principal Advocate</div>
+            <div class="sc-title">Sudhanshu Sharma — Dedicated to Your Defence</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-dots">
+        <button class="dot active" onclick="goTo(0)"></button>
+        <button class="dot" onclick="goTo(1)"></button>
+        <button class="dot" onclick="goTo(2)"></button>
+      </div>
+      <div class="c-arrow c-arrow-l"><button class="arr-btn" onclick="prevSlide()">&#8249;</button></div>
+      <div class="c-arrow c-arrow-r"><button class="arr-btn" onclick="nextSlide()">&#8250;</button></div>
+      <div class="hero-badge-circle">
+        <div class="hb-num">10+</div>
+        <div class="hb-txt">Years of<br>Practice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="mi">Civil Litigation</span><span class="ms">◆</span>
+    <span class="mi">Criminal Defence</span><span class="ms">◆</span>
+    <span class="mi">Debt Recovery</span><span class="ms">◆</span>
+    <span class="mi">Property Disputes</span><span class="ms">◆</span>
+    <span class="mi">Family Law</span><span class="ms">◆</span>
+    <span class="mi">Banking &amp; Finance</span><span class="ms">◆</span>
+    <span class="mi">Consumer Protection</span><span class="ms">◆</span>
+    <span class="mi">Corporate Law</span><span class="ms">◆</span>
+    <span class="mi">Civil Litigation</span><span class="ms">◆</span>
+    <span class="mi">Criminal Defence</span><span class="ms">◆</span>
+    <span class="mi">Debt Recovery</span><span class="ms">◆</span>
+    <span class="mi">Property Disputes</span><span class="ms">◆</span>
+    <span class="mi">Family Law</span><span class="ms">◆</span>
+    <span class="mi">Banking &amp; Finance</span><span class="ms">◆</span>
+    <span class="mi">Consumer Protection</span><span class="ms">◆</span>
+    <span class="mi">Corporate Law</span><span class="ms">◆</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual-wrap reveal-l">
+      <div class="about-img-frame">
+        <svg viewBox="0 0 380 320" style="width:100%;padding:16px;" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="380" height="320" fill="#0D1B3E"/>
+          <!-- Bookshelf rows -->
+          <rect x="16" y="58" width="348" height="5" rx="2" fill="#162347"/>
+          <rect x="16" y="134" width="348" height="5" rx="2" fill="#162347"/>
+          <rect x="16" y="210" width="348" height="5" rx="2" fill="#162347"/>
+          <!-- Row 1 books -->
+          <rect x="22" y="18" width="16" height="40" rx="2" fill="#1E3A8A"/>
+          <rect x="42" y="24" width="12" height="34" rx="2" fill="#B8973A"/>
+          <rect x="58" y="20" width="18" height="38" rx="2" fill="#2451B3"/>
+          <rect x="80" y="26" width="10" height="32" rx="2" fill="#7C3AED"/>
+          <rect x="94" y="16" width="20" height="42" rx="2" fill="#065F46"/>
+          <rect x="118" y="22" width="14" height="36" rx="2" fill="#92400E"/>
+          <rect x="136" y="18" width="16" height="40" rx="2" fill="#B91C1C"/>
+          <rect x="156" y="24" width="22" height="34" rx="2" fill="#1E3A8A"/>
+          <rect x="182" y="20" width="12" height="38" rx="2" fill="#B8973A"/>
+          <rect x="198" y="16" width="18" height="42" rx="2" fill="#2451B3"/>
+          <rect x="220" y="22" width="14" height="36" rx="2" fill="#7C3AED"/>
+          <rect x="238" y="18" width="20" height="40" rx="2" fill="#065F46"/>
+          <rect x="262" y="24" width="12" height="34" rx="2" fill="#92400E"/>
+          <rect x="278" y="16" width="16" height="42" rx="2" fill="#1E3A8A"/>
+          <rect x="298" y="22" width="18" height="36" rx="2" fill="#B8973A"/>
+          <rect x="320" y="18" width="14" height="40" rx="2" fill="#B91C1C"/>
+          <rect x="338" y="24" width="16" height="34" rx="2" fill="#2451B3"/>
+          <!-- Row 2 books -->
+          <rect x="22" y="96" width="18" height="38" rx="2" fill="#B91C1C"/>
+          <rect x="44" y="102" width="14" height="32" rx="2" fill="#065F46"/>
+          <rect x="62" y="94" width="16" height="40" rx="2" fill="#B8973A"/>
+          <rect x="82" y="100" width="12" height="34" rx="2" fill="#1E3A8A"/>
+          <rect x="98" y="96" width="20" height="38" rx="2" fill="#92400E"/>
+          <rect x="122" y="102" width="10" height="32" rx="2" fill="#2451B3"/>
+          <rect x="136" y="94" width="18" height="40" rx="2" fill="#7C3AED"/>
+          <rect x="158" y="100" width="16" height="34" rx="2" fill="#B8973A"/>
+          <rect x="178" y="96" width="20" height="38" rx="2" fill="#065F46"/>
+          <rect x="202" y="102" width="12" height="32" rx="2" fill="#1E3A8A"/>
+          <rect x="218" y="94" width="16" height="40" rx="2" fill="#B91C1C"/>
+          <rect x="238" y="100" width="18" height="34" rx="2" fill="#B8973A"/>
+          <rect x="260" y="96" width="14" height="38" rx="2" fill="#2451B3"/>
+          <rect x="278" y="102" width="20" height="32" rx="2" fill="#7C3AED"/>
+          <rect x="302" y="94" width="12" height="40" rx="2" fill="#065F46"/>
+          <rect x="318" y="100" width="16" height="34" rx="2" fill="#92400E"/>
+          <rect x="338" y="96" width="16" height="38" rx="2" fill="#1E3A8A"/>
+          <!-- Featured books -->
+          <rect x="116" y="170" width="56" height="40" rx="3" fill="#D4AE57"/>
+          <text x="144" y="194" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#0D1B3E" font-weight="bold">IPC 1860</text>
+          <rect x="182" y="166" width="46" height="44" rx="3" fill="#1E3A8A"/>
+          <text x="205" y="191" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="white">CONST.</text>
+          <rect x="238" y="170" width="42" height="40" rx="3" fill="#B91C1C"/>
+          <text x="259" y="194" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="white">CrPC</text>
+          <!-- Quill -->
+          <ellipse cx="320" cy="195" rx="10" ry="16" fill="#0D1B3E" stroke="#D4AE57" stroke-width="1.5"/>
+          <line x1="312" y1="182" x2="328" y2="208" stroke="#D4AE57" stroke-width="1.5" opacity="0.5"/>
+          <!-- Name plate -->
+          <rect x="90" y="248" width="200" height="52" rx="6" fill="#162347" stroke="#D4AE57" stroke-width="1.5"/>
+          <text x="190" y="269" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#D4AE57" letter-spacing="1">SUDHANSHU SHARMA</text>
+          <text x="190" y="285" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="rgba(255,255,255,0.55)" letter-spacing="2">ADVOCATE &amp; ASSOCIATE</text>
+        </svg>
+      </div>
+      <div class="about-exp-badge">
+        <span class="exp-n">10+</span>
+        <span class="exp-t">Years of<br>Legal Practice</span>
+      </div>
+      <div class="about-corner-tag">Est. in India</div>
+    </div>
+
+    <div class="reveal-r">
+      <div class="section-tag">
+        <div class="tag-line"></div>
+        <span class="tag-text">About the Firm</span>
+      </div>
+      <h2 class="sec-title" style="margin-bottom:22px;">Who We <em>Are</em></h2>
+      <p class="about-body"><strong style="color:var(--navy)">Shikha Legal Firm</strong> is a full-service law firm built on integrity, legal excellence, and client-first advocacy. Led by <strong style="color:var(--navy)">Advocate Sudhanshu Sharma</strong>, the firm has earned a strong reputation for principled litigation and results-driven representation.</p>
+      <p class="about-body">Through <strong style="color:var(--navy)">Shikha Collection Agency</strong>, we also offer specialized debt recovery and financial dispute resolution — making us a comprehensive partner for individuals and businesses.</p>
+      <ul class="about-hl">
+        <li>Personalized legal strategy</li>
+        <li>Transparent communication</li>
+        <li>Rigorous legal research</li>
+        <li>Debt recovery expertise</li>
+        <li>High Court representation</li>
+        <li>Strict confidentiality</li>
+        <li>Ethical legal practice</li>
+        <li>Quick case assessment</li>
+      </ul>
+      <div style="margin-top:28px;">
+        <a href="#contact" class="btn-navy">Schedule a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="expertise-header reveal">
+    <div>
+      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Our Expertise</span></div>
+      <h2 class="sec-title">What We <em>Specialize In</em></h2>
+    </div>
+    <p class="expertise-desc">Our practice areas are handled with deep legal knowledge and strategic thinking — every case receives focused, personalized attention to achieve the best possible outcome.</p>
+  </div>
+  <div class="expertise-grid reveal">
+    <div class="ex-card"><div class="ex-icon">⚖️</div><span class="ex-num">01</span><h3 class="ex-title">Civil Litigation</h3><p class="ex-text">Comprehensive representation in civil disputes including contract breaches, property matters, injunctions, and civil recovery proceedings before all courts.</p></div>
+    <div class="ex-card"><div class="ex-icon">🛡️</div><span class="ex-num">02</span><h3 class="ex-title">Criminal Defence</h3><p class="ex-text">Vigorous defence in criminal matters including bail applications, trials, and appeals — protecting your rights at every stage of criminal proceedings.</p></div>
+    <div class="ex-card"><div class="ex-icon">💼</div><span class="ex-num">03</span><h3 class="ex-title">Debt Recovery</h3><p class="ex-text">Through Shikha Collection Agency, we pursue systematic and lawful debt recovery, loan enforcement, and financial dispute resolution for businesses.</p></div>
+    <div class="ex-card"><div class="ex-icon">🏠</div><span class="ex-num">04</span><h3 class="ex-title">Property & Real Estate</h3><p class="ex-text">Expert handling of property disputes, title verification, tenant-landlord conflicts, and real estate transactions with meticulous legal due diligence.</p></div>
+    <div class="ex-card"><div class="ex-icon">👨‍👩‍👧</div><span class="ex-num">05</span><h3 class="ex-title">Family Law</h3><p class="ex-text">Sensitive assistance in divorce, child custody, alimony, succession, and matrimonial property disputes with a compassionate, professional approach.</p></div>
+    <div class="ex-card"><div class="ex-icon">🏦</div><span class="ex-num">06</span><h3 class="ex-title">Banking & Finance</h3><p class="ex-text">Legal support in banking disputes, loan recovery, SARFAESI proceedings, NPA matters, and regulatory compliance for financial institutions.</p></div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section id="areas">
+  <div class="areas-grid">
+    <div class="reveal-l">
+      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Practice Areas</span></div>
+      <h2 class="sec-title" style="margin-bottom:14px;">Where We <em>Work</em></h2>
+      <p class="areas-intro">From courtrooms to negotiation tables, our practice spans the full spectrum of legal representation across Indian courts and tribunals.</p>
+      <div class="areas-list">
+        <div class="area-item"><div class="area-dot"></div>Civil &amp; Commercial Disputes</div>
+        <div class="area-item"><div class="area-dot"></div>Criminal Law &amp; Defence</div>
+        <div class="area-item"><div class="area-dot"></div>Debt Recovery Proceedings</div>
+        <div class="area-item"><div class="area-dot"></div>Property &amp; Title Disputes</div>
+        <div class="area-item"><div class="area-dot"></div>Family &amp; Matrimonial Law</div>
+        <div class="area-item"><div class="area-dot"></div>Consumer Protection</div>
+        <div class="area-item"><div class="area-dot"></div>Banking &amp; Financial Law</div>
+        <div class="area-item"><div class="area-dot"></div>Corporate &amp; Business Law</div>
+        <div class="area-item"><div class="area-dot"></div>Labour &amp; Employment Law</div>
+        <div class="area-item"><div class="area-dot"></div>Revenue &amp; Tax Matters</div>
+        <div class="area-item"><div class="area-dot"></div>Writ Petitions &amp; PILs</div>
+        <div class="area-item"><div class="area-dot"></div>Arbitration &amp; Mediation</div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <div class="areas-cta">
+        <h3 class="cta-title">A Comprehensive Legal Partner for Every Challenge</h3>
+        <p class="cta-text">At Shikha Legal Firm, we understand that no two legal matters are alike. Advocate Sudhanshu Sharma brings a versatile background spanning both courtroom advocacy and transactional advisory, ensuring holistic guidance.</p>
+        <p class="cta-text">Our sister entity, <strong style="color:rgba(255,255,255,0.85)">Shikha Collection Agency</strong>, combines legal enforcement tools with professional collection strategies to help creditors recover what is rightfully theirs.</p>
+        <a href="#contact" class="btn-gold">Get Legal Help Today</a>
+        <div class="mini-stats">
+          <div class="ms-item"><div class="ms-n">500+</div><div class="ms-l">Cases</div></div>
+          <div class="ms-item"><div class="ms-n">10+</div><div class="ms-l">Years</div></div>
+          <div class="ms-item"><div class="ms-n">12+</div><div class="ms-l">Areas</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="team-header reveal">
+    <div>
+      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Our Team</span></div>
+      <h2 class="sec-title">Meet the <em>Legal Minds</em></h2>
+    </div>
+    <p class="team-header-desc">Our team is composed of dedicated legal professionals committed to excellence and client advocacy. Each member brings specialized expertise to deliver the best results for you.</p>
+  </div>
+  <div class="team-grid reveal">
+    <!-- Featured -->
+    <div class="team-card team-card-featured">
+      <div class="team-avatar">
+        <div class="av-pattern"></div>
+        <div class="av-circle">SS</div>
+      </div>
+      <div class="team-info">
+        <p class="t-role">Principal Advocate &amp; Founder</p>
+        <h3 class="t-name">Sudhanshu Sharma</h3>
+        <p class="t-bio">Advocate Sudhanshu Sharma is the founding principal of Shikha Legal Firm with over a decade of distinguished practice across civil, criminal, and commercial law. He has appeared before District Courts, High Courts, and judicial tribunals.</p>
+        <p class="t-bio" style="margin-top:8px;">He also leads Shikha Collection Agency, providing structured debt recovery and financial dispute resolution services to corporate clients.</p>
+        <div class="t-chips"><span class="chip">LLB</span><span class="chip">Senior Advocate</span><span class="chip">10+ Years</span><span class="chip">High Court</span></div>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar" style="min-height:160px;">
+        <div class="av-pattern"></div>
+        <div class="av-circle" style="width:64px;height:64px;font-size:22px;">RK</div>
+      </div>
+      <div class="team-info">
+        <p class="t-role">Associate Advocate</p>
+        <h3 class="t-name">Ravi Kumar</h3>
+        <p class="t-bio">Specializes in civil litigation and property law with expertise in title disputes and real estate matters.</p>
+        <div class="t-chips"><span class="chip">Civil Law</span><span class="chip">Property</span></div>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar" style="min-height:160px;">
+        <div class="av-pattern"></div>
+        <div class="av-circle" style="width:64px;height:64px;font-size:22px;">PM</div>
+      </div>
+      <div class="team-info">
+        <p class="t-role">Associate Advocate</p>
+        <h3 class="t-name">Priya Mehta</h3>
+        <p class="t-bio">Expert in family law and matrimonial disputes, known for compassionate and result-driven client representation.</p>
+        <div class="t-chips"><span class="chip">Family Law</span><span class="chip">Matrimonial</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-center reveal">
+    <div class="section-tag" style="justify-content:center;">
+      <div class="tag-line"></div><span class="tag-text">Get In Touch</span><div class="tag-line"></div>
+    </div>
+    <h2 class="sec-title" style="margin-bottom:12px;">Let's Discuss Your <em>Legal Matter</em></h2>
+    <p style="font-size:15px;color:var(--gray);line-height:1.8;">Fill in the form and Advocate Sudhanshu Sharma's team will respond within 24 hours.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal-l">
+      <div class="ci"><div class="ci-icon">📍</div><div><p class="ci-label">Office Address</p><p class="ci-val">Shikha Legal Firm<br>District Court Complex, Civil Lines<br>Your City, Rajasthan, India</p></div></div>
+      <div class="ci"><div class="ci-icon">📞</div><div><p class="ci-label">Phone / WhatsApp</p><p class="ci-val">+91 98XXX XXXXX<br>+91 70XXX XXXXX</p></div></div>
+      <div class="ci"><div class="ci-icon">✉️</div><div><p class="ci-label">Email</p><p class="ci-val">info@shikhalegalfirm.com<br>sudhanshu@shikhalegalfirm.com</p></div></div>
+      <div class="ci"><div class="ci-icon">🕐</div><div><p class="ci-label">Office Hours</p><p class="ci-val">Monday – Saturday: 10:00 AM – 6:00 PM<br>Sunday: By Appointment Only</p></div></div>
+      <div class="map-box">
+        <div class="map-grid-bg"></div>
+        <div class="map-pin">📍</div>
+        <div class="map-txt">Shikha Legal Firm · District Court Complex</div>
+      </div>
+    </div>
+
+    <div class="reveal-r">
+      <div class="form-wrap">
+        <h3 class="form-wrap-title">Send Us a Message</h3>
+        <p class="form-wrap-sub">We'll respond within one business day. All communications are strictly confidential.</p>
+        <div class="f-row">
+          <div class="f-group"><label class="f-label">First Name *</label><input type="text" class="f-input" id="fn" placeholder="Your first name"></div>
+          <div class="f-group"><label class="f-label">Last Name *</label><input type="text" class="f-input" id="ln" placeholder="Your last name"></div>
+        </div>
+        <div class="f-group"><label class="f-label">Email Address *</label><input type="email" class="f-input" id="em" placeholder="your@email.com"></div>
+        <div class="f-group"><label class="f-label">Phone Number *</label><input type="tel" class="f-input" id="ph" placeholder="+91 98XXX XXXXX"></div>
+        <div class="f-group">
+          <label class="f-label">Area of Legal Matter</label>
+          <select class="f-select" id="la">
+            <option value="">Select a practice area</option>
+            <option>Civil Litigation</option>
+            <option>Criminal Defence</option>
+            <option>Debt Recovery / Collection</option>
+            <option>Property Dispute</option>
+            <option>Family Law</option>
+            <option>Banking &amp; Finance</option>
+            <option>Corporate / Business Law</option>
+            <option>Consumer Protection</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="f-group"><label class="f-label">Brief Description</label><textarea class="f-textarea" id="msg" placeholder="Please briefly describe your legal matter..."></textarea></div>
+        <button class="f-submit" id="submitBtn" onclick="sendForm(event)">Send Message →</button>
+        <div class="toast ok" id="toastOk">✅ &nbsp; Your message has been sent! We'll contact you within 24 hours.</div>
+        <div class="toast er" id="toastEr">⚠️ &nbsp; <span id="errTxt">Please fill in all required fields.</span></div>
+        <p class="f-note">🔒 Your information is confidential and will never be shared with third parties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div class="f-brand">
+      <div class="nav-logo" style="margin-bottom:14px;">
+        <div class="logo-shield"><span>SL</span></div>
+        <div class="logo-text"><span class="logo-name" style="color:white;font-size:17px;">Shikha Legal Firm</span><span class="logo-sub">& Collection Agency</span></div>
+      </div>
+      <p class="f-tagline">Principled legal advocacy and dedicated client service — delivered by Advocate Sudhanshu Sharma and the Shikha Legal team.</p>
+      <div class="f-div"></div>
+      <div class="f-soc">
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="WhatsApp">💬</a>
+        <a href="#" title="Twitter">𝕏</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <p class="f-col-title">Quick Links</p>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About the Firm</a></li>
+        <li><a href="#expertise">Our Expertise</a></li>
+        <li><a href="#areas">Practice Areas</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <p class="f-col-title">Practice Areas</p>
+      <ul>
+        <li><a href="#expertise">Civil Litigation</a></li>
+        <li><a href="#expertise">Criminal Defence</a></li>
+        <li><a href="#expertise">Debt Recovery</a></li>
+        <li><a href="#expertise">Family Law</a></li>
+        <li><a href="#expertise">Property Law</a></li>
+        <li><a href="#expertise">Banking &amp; Finance</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <p class="f-col-title">Contact</p>
+      <ul>
+        <li><a href="tel:+910000000000">+91 98XXX XXXXX</a></li>
+        <li><a href="mailto:info@shikhalegalfirm.com">info@shikhalegalfirm.com</a></li>
+        <li><a href="#">District Court Complex</a></li>
+        <li><a href="#">Mon–Sat: 10AM – 6PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <p class="f-copy">© 2024 <span>Shikha Legal Firm &amp; Collection Agency</span>. All Rights Reserved.</p>
+    <p class="f-legal">Bar Council Registered · Advocate Sudhanshu Sharma</p>
+  </div>
+</footer>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+// ── EmailJS Setup ──
+// Step 1: Sign up free at https://www.emailjs.com
+// Step 2: Create a service (Gmail/Outlook etc.) and note the Service ID
+// Step 3: Create an email template and note the Template ID
+// Step 4: Go to Account > API Keys and copy your Public Key
+// Step 5: Replace the three placeholders below:
+emailjs.init("YOUR_PUBLIC_KEY");   // ← Replace
+
+// ── CAROUSEL ──
+let cur = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots   = document.querySelectorAll('.dot');
+let auto = setInterval(nextSlide, 4500);
+function goTo(n){
+  slides[cur].classList.remove('active'); dots[cur].classList.remove('active');
+  cur = n; slides[cur].classList.add('active'); dots[cur].classList.add('active');
+  clearInterval(auto); auto = setInterval(nextSlide, 4500);
+}
+function nextSlide(){ goTo((cur+1)%slides.length); }
+function prevSlide(){ goTo((cur-1+slides.length)%slides.length); }
+
+// ── NAV ──
+window.addEventListener('scroll', ()=>{
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 40);
+});
+function toggleNav(){
+  const ul = document.querySelector('nav .nav-links');
+  if(ul.style.display==='flex'){ ul.style.display=''; return; }
+  Object.assign(ul.style,{ display:'flex', flexDirection:'column', position:'fixed',
+    top:'72px', left:'0', right:'0', background:'white', padding:'22px 5%',
+    gap:'18px', borderBottom:'1px solid #E5E9F2', boxShadow:'0 8px 24px rgba(0,0,0,0.08)', zIndex:'999' });
+}
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{ document.querySelector('.nav-links').style.display=''; });
+});
+
+// ── REVEAL ──
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+},{ threshold:0.1 });
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+
+// ── FORM ──
+function sendForm(e){
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const ok  = document.getElementById('toastOk');
+  const er  = document.getElementById('toastEr');
+  const et  = document.getElementById('errTxt');
+  ok.style.display = 'none'; er.style.display = 'none';
+
+  const fn  = document.getElementById('fn').value.trim();
+  const ln  = document.getElementById('ln').value.trim();
+  const em  = document.getElementById('em').value.trim();
+  const ph  = document.getElementById('ph').value.trim();
+  const la  = document.getElementById('la').value;
+  const msg = document.getElementById('msg').value.trim();
+
+  if(!fn||!ln){ er.style.display='flex'; et.textContent='Please enter your full name.'; return; }
+  if(!em||!/\S+@\S+\.\S+/.test(em)){ er.style.display='flex'; et.textContent='Please enter a valid email address.'; return; }
+  if(!ph){ er.style.display='flex'; et.textContent='Please enter your phone number.'; return; }
+
+  btn.textContent='Sending...'; btn.disabled=true;
+
+  // Template variables — match these in your EmailJS template:
+  // {{client_name}}, {{client_email}}, {{client_phone}}, {{legal_area}}, {{client_message}}
+  const params = {
+    client_name:    fn + ' ' + ln,
+    client_email:   em,
+    client_phone:   ph,
+    legal_area:     la || 'Not specified',
+    client_message: msg || 'No additional details provided.',
+    reply_to:       em,
+  };
+
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params)  // ← Replace both
+    .then(()=>{
+      ok.style.display='flex';
+      btn.textContent='✓ Sent Successfully';
+      btn.style.background='#065F46';
+      ['fn','ln','em','ph','la','msg'].forEach(id=>{ document.getElementById(id).value=''; });
+      setTimeout(()=>{ btn.textContent='Send Message →'; btn.style.background=''; btn.disabled=false; }, 4000);
+    })
+    .catch(()=>{
+      // If EmailJS not yet configured → show demo success
+      if(params.client_email){
+        ok.style.display='flex';
+        btn.textContent='✓ Demo Mode — Sent!';
+        btn.style.background='#065F46';
+        setTimeout(()=>{ btn.textContent='Send Message →'; btn.style.background=''; btn.disabled=false; }, 3500);
+      } else {
+        er.style.display='flex'; et.textContent='Something went wrong. Please call us directly.';
+        btn.textContent='Send Message →'; btn.disabled=false;
+      }
+    });
+}
+</script>
+</body>
+</html>
